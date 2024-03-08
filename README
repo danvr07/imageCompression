@@ -1,0 +1,43 @@
+-------------------------------Cerinta 1-------------------------------
+
+    Mai intai se calculeaza scorul si culoarea medie, daca scorul
+este mai mare sau egal decat pragul atunci nodul arborelui va fi frunza 
+si va lua valorile calculate anterior, nodul va fi de tip 1(frunza) iar
+daca scorul este mai mic decat pragul atunci matricea initiala se desparte
+in alte 4 matrici, fiecare matrice fiind a patra parte din matricea initiala
+matricile vor lua valorile de la stanga la dreapta, in jos si dupa la stanga
+
+                                -1->-2->
+
+                                -4-<-3-<
+
+Nodurile care nu sunt frunze vor fi te tip 0
+
+Aceasta procedura se va continua recursiv pana nu se vor gasi toate nodurile
+frunza
+La sfarsitul functiei se dealoca toata memoria pentru matrici
+
+Pentru a calcula nivelul maxim al arborelui se foloseste o functie recursiva
+Se va calcula nevelul maxim al fiecarui copil, daca nivelul este mai mic
+decat nivelulmaxim calculat anterior, nivelul maxim ramane la fel,
+daca este mai mare, nivelul maxim iavaloarea nivelului.
+
+Pentru a calcula numarul frunzelor din arbore,
+programul se va folosi de tipul nodului adica daca nodul este frunza
+va fi de tip 1, se parcurge arborele recursiv, cand intalneste 
+un nod de tip 1, se aduna +1;
+la sfarsit functia returneaza numarul frunzelor;
+
+Pentru a determina dimensiunea laturii pătratului
+pentru cea mai mare zonă din imagine care a rămas nedivizată, programul
+va baga intr un vector size ul frunzei cu cel mai mare size
+
+---------------------------------Cerinta 2---------------------------;
+
+    Pentru cerinta 2 mai intai sa baga size ul initial intr un fisier binar,
+dupa acest lucru se va parcurge arborele cuaternar pe nivel, pentru acest
+lucru este folosita o coada in care se baga mai intai radacina, dupa acest lucru
+este extrasa(doar daca coada nu este goala), se verifica ce tip de nod este,
+daca este de tip 1 sunt scrise intr un fisier binar toate datele din nod,
+iar daca este de tip 0 se scrie doar tipul, se verifica daca nodul are copii,
+daca da, sunt bagati in coada si extrasi pe rand, repetand aceeasi procedura.
